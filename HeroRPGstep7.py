@@ -8,6 +8,13 @@ class Character:
         self.health = health
         self.power = power
         self.name = name 
+    
+    def alive(self):
+            return self.health > 0
+
+
+    def print_status(self):
+        print("{} has {} health and {} power".format(self.name, self.health, self.power))
 
 class Hero(Character):
     def __init__(self, health, power, name):
@@ -28,11 +35,6 @@ class Hero(Character):
         else:
             print("Invalid input {}".format(raw_input))
 
-    def alive(self):
-            return self.health > 0
-
-    def print_status(self):
-        print("{} has {} health and {} power".format(self.name, self.health, self.power))
 
 class Goblin:
     def __init__(self, health, power, name):
@@ -44,12 +46,8 @@ class Goblin:
             if hero_health <= 0:
                 print("You are dead.")
 
-    def alive(self):
-        return enemy.health > 0
 
     
-    def print_status(self):
-        print("{} has {} health and {} power" .format(self.name, self.health, self.power))
 
     
 

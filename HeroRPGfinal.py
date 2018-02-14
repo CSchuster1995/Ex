@@ -76,6 +76,11 @@ class Medic(Character):
                 self.health += 2
                 print("{} has healed for 2 points!".format(enemy.name))
 
+class Shadow(Character):
+    def __init__(self, health, power, name):
+        super().__init__(health, power, name)
+        
+
 def main():
     hero = Hero (10, 6, 'Strongguy')
     goblin = Goblin (10, 2, 'Greenboy')
